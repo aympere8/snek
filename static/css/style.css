@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url(../images/backg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1920px 1080px;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+#glssblock {
+  position: relative;
+  left: 15vw;
+  width: 70vw;
+  height: 95vh;
+  margin-top: 5vh;
+  background: rgba(56, 70, 107, 0.58);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 8px;
+}
+/*# sourceMappingURL=style.css.map */
