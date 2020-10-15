@@ -1,0 +1,17 @@
+<div>
+    <h1>All characters</h1>
+
+{{# each chardatset}}
+<div id = "char-sm-card">
+    <img src="{{this.url}}" alt="{{this.code}} profile">
+    
+    <form action="/charprofile" method="post">
+        <input type="hidden" name="code" value="{{this.code}}">
+        <input type="submit" value="{{this.code}}">
+    </form>
+</div>
+
+
+{{/ each}}
+    
+</div>

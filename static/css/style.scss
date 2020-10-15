@@ -1,5 +1,5 @@
 body{
-
+   
     margin:0;
 
     padding: 0;
@@ -8,10 +8,11 @@ body{
     background-image: url(../images/backg.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size:1920px 1080px ;
+    background-size:cover/* 1920px 1080px */ ;
     background-attachment: fixed;
     color: white;
     font-family: 'Raleway', sans-serif;
+    
     
 
     
@@ -22,7 +23,9 @@ body{
 // index styling
 #glssblock
 {
-    
+    padding-top: 3vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
     position: relative;
     left: 15vw;
     width:70vw;
@@ -31,6 +34,89 @@ body{
     background: rgba(56, 70, 107, 0.58);
 backdrop-filter: blur(16px);
 /* Note: backdrop-filter has minimal browser support */
+    
 
 border-radius: 8px;
+}
+hr{
+    width: 65%;
+    margin-bottom: 13vh;
+}
+
+#mutop
+{
+   
+
+font-size: 5vw;
+line-height: 85px;
+letter-spacing: 0.27em;
+
+
+}
+
+a{
+    
+    color:white;
+    text-decoration: none;
+    font-size: 2vw;    
+    letter-spacing: 0.15em; ;
+    
+    
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+#links
+{
+    
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    font-weight: 400;
+}
+
+#linkt
+{
+    font-size: 3vw;
+    align-self: center;
+}
+
+#arrw
+{
+    display: inline;
+}
+
+#indelem
+{
+    display: inline-block;
+}
+
+#arrw
+{
+    margin-left: 4vw;
+    height: 3vw;
+    width: 3vw;
+
+}
+
+
+table
+{
+    tr{
+        border-collapse:separate; 
+        border-spacing:0 15px;
+    }
+    margin: 6vh 0vh 6vh 0vh;
+    
+}
+
+#contact{
+    margin-top:20vh ;
+}
+
+#insta{
+    
+    width: 50px;
+    height:50px;
+
 }

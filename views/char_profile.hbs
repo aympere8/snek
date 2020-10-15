@@ -1,0 +1,42 @@
+<div>
+
+    <div>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>{{res.char_name}}</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>{{res.char_age}}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{res.char_gender}}</td>
+        </tr>
+        <tr>
+            <td>Height</td>
+            <td>{{res.char_height}}</td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>{{res.char_weight}}</td>
+        </tr>
+        
+    </table>
+    <img src="{{profurl}}" alt="profile_pic">
+    </div>
+    <hr>
+    <h1>Backstory</h1>
+    <p>{{res.ch_backstory}}</p>
+
+
+    <div>
+        {{# each gallarray}}
+        <img src="{{this}}" alt="url not found">
+        {{/ each}}
+
+    </div>
+
+</div>
+

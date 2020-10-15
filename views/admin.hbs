@@ -1,8 +1,9 @@
+{{#if message}}<h1>{{message}}</h1>{{/if}}
 <div>
     <di id= "deleter">
     
-        <form action="/delete" method="post">
-        <input type="text" name="delcode" id="delfeild">
+        <form action="/remove" method="post">
+        <input type="text" name="ch_code" id="delfeild">
         <input type="submit" value="Delete">
         </form>
     
@@ -19,20 +20,23 @@
         <input type="text" name="ch_name" id="chcode">
 
         <label for="ch_age">Age</label>
-        <input type="text" name="ch_age" id="chcode">
+        <input type="number" min="0" name="ch_age" id="chcode">
 
         <label for="ch_gender">Gender</label>
         <input type="text" name="ch_gender" id="chcode">
 
         <label for="ch_weight">Weight</label>
-        <input type="text" name="ch_weight" id="chcode">
+        <input type="number" min="0" name="ch_weight" id="chcode">
         
         <label for="ch_height">Height</label>
-        <input type="text" name="ch_height" id="chcode">
+        <input type="number" min="0" name="ch_height" id="chcode">
 
 
         <input type="file" name="ch_profile" id="ch_prof">
         <input type="file" name="ch_stats" id="ch_stats">
+
+        <br>
+        <textarea name="backstory" id="backstory" cols="50" rows="30"></textarea>
 
         <input type="submit" value="Add">
 
@@ -41,13 +45,15 @@
 
 </div>
 
-
+<h1>pass:Sneks@gall1</h1>
 
 <div>
 
-    <h1>test image upload</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data" >
-        <input type="file" name="tup" id="tup">
-        <input type="submit" value="tup">
+    <h1>add image to character gallery</h1>
+    <form action="/gallad" method="post" enctype="multipart/form-data" >
+       <label for="ch_code"> Character code</label>
+       <input type="text" name="ch_code" id="ch_code">
+        <input type="file" name="gup" id="gup">
+        <input type="submit" value="Add to gallery">
     </form>
 </div>
