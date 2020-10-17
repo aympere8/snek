@@ -38,6 +38,12 @@ hr {
   letter-spacing: 0.27em;
 }
 
+@media (max-width: 736px) {
+  #mutop {
+    font-size: 4vh;
+  }
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -46,6 +52,11 @@ a {
 }
 
 a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
   color: white;
   text-decoration: none;
 }
@@ -61,6 +72,12 @@ a:hover {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media (max-width: 736px) {
+  #linkt {
+    font-size: 3vh;
+  }
 }
 
 #arrw {
@@ -90,8 +107,74 @@ table tr {
   margin-top: 20vh;
 }
 
+#contx {
+  font-size: 3vw;
+}
+
+@media (max-width: 736px) {
+  #contx {
+    font-size: 3vh;
+  }
+}
+
 #insta {
+  margin: 15px;
   width: 50px;
   height: 50px;
+}
+
+#header {
+  font-size: 20%;
+  background-color: rgba(70, 53, 91, 0.5);
+  height: 10vh;
+  width: 100%;
+}
+
+#headtxt {
+  font-size: 7vh;
+  margin-left: 2vw;
+}
+
+#charlist {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(240px, auto))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  margin: 0 15vw 0 15vw;
+}
+
+#char-sm-card {
+  background-color: rgba(70, 53, 91, 0.5);
+  width: 230px;
+  height: 230px;
+  margin-left: 3vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  margin-right: 3vw;
+}
+
+#profileimg {
+  margin: 20px;
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 60px;
+}
+
+#buttonlink {
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+
+#buttonlink:focus {
+  outline: none;
+  border: none;
+}
+
+#buttonlink:active {
+  outline: none;
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */
