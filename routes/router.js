@@ -3,15 +3,20 @@ var router = require("express").Router();
 var mg= require('mongodb').MongoClient;
 
 var cld= require("cloudinary").v2;
-const url='mongodb+srv://lucidia:logmein@lucid.jleku.mongodb.net/snekchar?retryWrites=true&w=majority';
+
+
+
+
+
+var url=process.env.MON_URL;
 
 
 
 cld.config(
     {
-        cloud_name :'snekgal',
-        api_key:'576238157374727',
-        api_secret: 'H7yRZfZF58l9YuY7VANPEPBlTb4'
+        cloud_name :process.env.CLOUD_NAME,
+        api_key:process.env.API_KY,
+        api_secret: process.env.API_SRT
         
     }
 )
@@ -99,7 +104,7 @@ router.get('/comm',async (rq,rs)=>{
 
 
 //ADMIN ROUTES
-router.get('/admin', (rq,rs)=>{rs.render('admin')})
+router.get('/admin', (rq,rs)=>{rs.render('admin', {layout:'adminlayout'})})
 
 
 //character data add route
@@ -143,7 +148,7 @@ router.post('/add', async (rq,rs)=>{
                 public_id: ch_code
             })
 
-        rs.render('admin',{message: 'character added!'});
+        rs.render('admin',{layout:'adminlayout', message: 'character added!'});
     }
 
     catch(err) 
@@ -170,7 +175,7 @@ router.post('/remove', async (rq,rs)=>{
         var check = await coll.findOne({char_code:rq.body.ch_code})
         if(check==null)
         {
-            rs.render('admin', {message: 'character not found'})
+            rs.render('admin', {message: 'character not found', layout:'adminlayout'})
         }
         else{
         
@@ -180,7 +185,7 @@ router.post('/remove', async (rq,rs)=>{
 
         await cld.api.delete_resources_by_tag(rq.body.ch_code);
         await cld.api.delete_resources(rq.body.ch_code);
-        rs.render('admin', {message: 'character removed!'});
+        rs.render('admin', {layout:'adminlayout',message: 'character removed!'});
         }
         
     }
@@ -219,7 +224,7 @@ router.post('/gallad',async (rq,rs)=>{
             folder: rq.body.ch_code, 
             tags : [rq.body.ch_code]
         });
-        rs.render('admin', {message: 'image added to character gallery'});
+        rs.render('admin', {layout:'adminlayout',message: 'Image added to character gallery'});
     }}
     catch(err)
     {

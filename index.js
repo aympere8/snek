@@ -1,7 +1,9 @@
 var express =  require("express");
+require('dotenv').config();
 var path = require("path");
 var handlebars =  require("express-handlebars");
 var fupload= require("express-fileupload");
+
 
 
 
